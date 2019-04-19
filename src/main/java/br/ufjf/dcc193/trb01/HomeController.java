@@ -17,4 +17,9 @@ public class HomeController {
         return "sedes.jsp";
     }
 
+    @RequestMapping("membros.html")
+    public String membros() {
+        return "membros.jsp";
+    }
+
 }
