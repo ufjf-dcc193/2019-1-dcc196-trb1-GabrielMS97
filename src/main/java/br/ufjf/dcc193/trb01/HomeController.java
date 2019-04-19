@@ -22,4 +22,9 @@ public class HomeController {
         return "membros.jsp";
     }
 
+    @RequestMapping("atividades.html")
+    public String atividades() {
+        return "atividades.jsp";
+    }
+
 }
