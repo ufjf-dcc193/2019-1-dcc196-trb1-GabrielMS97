@@ -4,6 +4,9 @@ import javax.persistence.*;
 
 @Entity
 public class Sede {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
 
     private String nome;
     private String estado;

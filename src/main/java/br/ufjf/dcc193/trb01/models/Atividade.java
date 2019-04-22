@@ -6,6 +6,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Atividade {
+	@Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private Long id;
+	
     private String titulo;
     private String descricao;
     @DateTimeFormat(pattern = "dd-MM-yyyy")

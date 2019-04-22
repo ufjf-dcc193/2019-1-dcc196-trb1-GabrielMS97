@@ -6,6 +6,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Membro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
     private String nome;
     private String funcao;
     private String email;
