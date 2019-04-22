@@ -22,6 +22,14 @@ public class Atividade {
     private int horasExecutiva;
 
     public Atividade(){
+	}
+	
+	public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
 	public String getTitulo() {

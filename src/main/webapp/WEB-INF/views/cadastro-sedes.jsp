@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" %>
 
 <h1>Cadastro de Sede</h1>
-<form action="sede-cadastrar.html" method="post">
+<form action="cadastro-sedes.html" method="post">
     <label>Nome da Sede</label>
     <input required type="text" name="nome" placeholder="Digite o nome da Sede"><br/>
     <label>Estado</label>

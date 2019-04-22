@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import br.ufjf.dcc193.trb01.models.Sede;
 import br.ufjf.dcc193.trb01.repositories.SedeRepository;
@@ -31,5 +33,11 @@ public class SedeController{
         ModelAndView mv = new ModelAndView();
         mv.setViewName("cadastro-sedes.jsp");
         return mv;
+    }
+
+    @PostMapping("cadastro-sedes.html")
+    public RedirectView sedeCadastrarPost(Sede sede){
+        repositorySede.save(sede);
+        return new RedirectView("/sedes.html?cadastrado=true");
     }
 }
